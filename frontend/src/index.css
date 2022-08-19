@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  background-color: #f1f1f1;
+}
+
+.container {
+  width: 100%;
+  /* max-width: 960px; */
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+/* Header styling Start */
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 25px;
+  background-color: #3fb87e;
+  color: white;
+}
+
+.nav-header h1 {
+  font-weight: bold;
+  font-size: 32px;
+}
+
+li {
+  list-style: none;
+}
+
+.header-link {
+  color: white;
+}
+/* Header styling end */
+
+h1 {
+  font-size: 48px;
+  font-weight: 500;
+}
+
+p {
+  font-size: 18px;
+}
+
+/* /register styling start */
+.register {
+  padding: 150px 0;
+}
+
+.submessage {
+  color: #a1a1a1;
+  font-size: 16px;
+}
+
+.form-group {
+  max-width: 710px;
+  margin: 50px auto;
+}
+
+.form-group form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-group label {
+  align-self: flex-start;
+  font-size: 18px;
+}
+
+.form-group input {
+  width: 100%;
+  height: 25px;
+  margin-bottom: 5px;
+  border: none;
+  padding-left: 5px;
+}
+
+.form-group input:focus {
+  outline: 2px solid #3fb87e;
+}
+
+.btn-primary {
+  color: white;
+  background-color: #3fb87e;
+  width: 225px;
+  height: 42px;
+  border: none;
+  margin-top: 25px;
+  font-weight: 500;
+  font-size: 18px;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+}
+
+.btn-primary:hover {
+  background-color: #2b7b55;
+}
+
+a {
+  text-decoration: none;
+  color: #3fb87e;
+  font-weight: medium;
+  font-size: 18px;
+}
+/* /register styling end */
+
+/* /login styling start */
+.login {
+  padding: 150px 0;
+}
+
+/* /login styling end */
+
+/* forgot password styling start */
+.forgot-pass {
+  padding: 150px 0;
+}
+
+.forgot-pass-link {
+  position: relative;
+  display: block;
+  margin-top: -40px;
+  margin-bottom: 40px;
+  font-size: 15px;
+}
+
+/* forgot password styling end */
+
+/* verify password styling start */
+.verify-pass {
+  padding: 150px 0;
+}
+/* verify password styling end */
+
+@media (max-width: 600px) {
+  .nav-header h1 {
+    font-size: 22px;
+  }
+
+  .header-link {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .submessage {
+    font-size: 12px;
+  }
+
+  .form-group {
+    padding: 0 15px;
+  }
+
+  .form-group label {
+    font-size: 15px;
+  }
+
+  a {
+    font-size: 14px;
+  }
+  .forgot-pass-link {
+    font-size: 14px;
+  }
+}
