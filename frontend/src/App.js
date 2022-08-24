@@ -5,6 +5,8 @@ import Register from "./pages/Register";
 import VerifyPass from "./pages/VerifyPass";
 import ForgotPass from "./pages/ForgotPass";
 import Dashboard from "./pages/Dashboard";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
@@ -21,6 +23,7 @@ function App() {
           </Routes>
         </div>
       </Router>
+      <ToastContainer />
     </>
   );
 }

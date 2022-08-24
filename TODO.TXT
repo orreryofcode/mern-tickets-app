@@ -1,0 +1,4 @@
+1. Add "created at" value for each ticket
+2. Fix styling on "Logout" button.
+3. Fix logout functionality
+4. Handle forgot password functionality on frontend

@@ -48,7 +48,7 @@ const createUser = asyncHandler(async (req, res) => {
     });
   } else {
     res.status(400);
-    throw new Error("Invalid user data");
+    throw new Error("Invalid user data.");
   }
 });
 
@@ -106,9 +106,8 @@ const forgotPass = asyncHandler(async (req, res) => {
   });
 });
 
-// desc:         Send reset password email to user
-// route:        put /api/users/forgot-password/:token
-// access:       Public
+// desc:         Reset user's password
+// route:        PUT /api/users/forgot-password/:token
 const forgotPassVerify = asyncHandler(async (req, res) => {
   const { token } = req.params;
   const { newPassword } = req.body;
