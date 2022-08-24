@@ -19,7 +19,7 @@ function App() {
             <Route path='/register' element={<Register />} />
             <Route path='/login' element={<Login />} />
             <Route path='/forgot-password' element={<ForgotPass />} />
-            <Route path='/verify-password' element={<VerifyPass />} />
+            <Route path='/verify-password/:token' element={<VerifyPass />} />
           </Routes>
         </div>
       </Router>

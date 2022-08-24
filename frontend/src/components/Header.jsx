@@ -20,11 +20,15 @@ function Header() {
         <h1>Triage</h1>
         <nav>
           <ul>
-            {user && (
+            {user ? (
               <li>
                 <button onClick={onLogout} className='btn-logout'>
                   Log Out
                 </button>
+              </li>
+            ) : (
+              <li>
+                <Link to='/login'>Log In</Link>
               </li>
             )}
           </ul>

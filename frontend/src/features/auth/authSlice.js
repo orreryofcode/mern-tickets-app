@@ -51,6 +51,44 @@ export const logout = createAsyncThunk("auth/logout", async () => {
   await authService.logout();
 });
 
+// Handle forgot password
+export const forgot = createAsyncThunk(
+  "auth/forgot",
+  async (user, thunkAPI) => {
+    try {
+      return await authService.forgot(user);
+    } catch (error) {
+      const message =
+        (error.response &&
+          error.response.data &&
+          error.response.data.message) ||
+        error.message ||
+        error.toString();
+
+      return thunkAPI.rejectWithValue(message);
+    }
+  }
+);
+
+// Verify and reset password
+export const verify = createAsyncThunk(
+  "auth/verify",
+  async (user, thunkAPI) => {
+    try {
+      return await authService.verify(user);
+    } catch (error) {
+      const message =
+        (error.response &&
+          error.response.data &&
+          error.response.data.message) ||
+        error.message ||
+        error.toString();
+
+      return thunkAPI.rejectWithValue(message);
+    }
+  }
+);
+
 export const authSlice = createSlice({
   name: "auth",
   initialState,
@@ -90,6 +128,34 @@ export const authSlice = createSlice({
         state.user = action.payload;
       })
       .addCase(login.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isError = true;
+        state.message = action.payload;
+        state.user = null;
+      })
+      .addCase(forgot.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(forgot.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.isSuccess = true;
+        state.user = action.payload;
+      })
+      .addCase(forgot.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isError = true;
+        state.message = action.payload;
+        state.user = null;
+      })
+      .addCase(verify.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(verify.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.isSuccess = true;
+        state.user = action.payload;
+      })
+      .addCase(verify.rejected, (state, action) => {
         state.isLoading = false;
         state.isError = true;
         state.message = action.payload;

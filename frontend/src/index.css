@@ -36,9 +36,10 @@ body {
 
 li {
   list-style: none;
+  color: white;
 }
 
-.header-link {
+nav ul li a {
   color: white;
 }
 

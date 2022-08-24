@@ -81,7 +81,6 @@ const forgotPass = asyncHandler(async (req, res) => {
   const { email } = req.body;
 
   const user = await User.findOne({ email });
-  console.log(user);
 
   // Check if user exists with email
   if (!user) {
@@ -92,13 +91,13 @@ const forgotPass = asyncHandler(async (req, res) => {
   // generate email verification token
   const emailVerificationToken = generateToken(user._id);
   // store path in variable
-  const url = `http://localhost:5000/api/users/forgot-password/${emailVerificationToken}`;
+  const url = `http://localhost:3000/verify-password/${emailVerificationToken}`;
 
   // send the email to the registered user
   transporter.sendMail({
     to: email,
     subject: "Reset password",
-    html: `Click <a href='${url}> here</a> to reset your password.`,
+    html: `Click <a href='${url}'> here to reset your password.</a> `,
   });
 
   res.status(201).send({
@@ -119,12 +118,12 @@ const forgotPassVerify = asyncHandler(async (req, res) => {
   }
 
   // Verify token from email
-  let payload = null;
+  let payload;
   try {
     payload = jwt.verify(token, process.env.JWT_SECRET);
   } catch (error) {
     res.status(500).json({
-      message: "Error",
+      message: "Token does not match",
     });
   }
 
