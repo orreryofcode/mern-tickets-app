@@ -158,6 +158,7 @@ a {
 /* Dashboard styling start */
 .dashboard {
   padding: 100px 0;
+  min-height: 100vh;
 }
 
 .dashboard-content {
@@ -195,6 +196,10 @@ a {
   display: flex;
 }
 
+.ticket-title {
+  text-align: left;
+}
+
 .ticket-id {
   margin-left: 5px;
 }
@@ -209,6 +214,9 @@ a {
   background-color: #4f4f4f;
   padding: 2px 5px;
   width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .ticket-status p {
@@ -230,7 +238,7 @@ a {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   background-color: rgba(0, 0, 0, 0.35);
   justify-content: center;
   align-items: center;
@@ -296,6 +304,137 @@ a {
   }
 }
 /* Spinner Styling End */
+@media (max-width: 1110px) {
+  .nav-header h1 {
+    font-size: 22px;
+  }
+
+  .header-link {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .ticket-heading-title-container {
+    align-items: center;
+  }
+
+  .ticket-title {
+    font-size: 16px;
+  }
+
+  .ticket-id {
+    font-size: 12px;
+  }
+
+  .ticket-date {
+    font-size: 9px;
+  }
+
+  .ticket-status {
+    width: 70px;
+  }
+
+  .ticket-status p {
+    font-size: 12px;
+  }
+
+  .ticket-body {
+    font-size: 12px;
+  }
+
+  .dashboard-btn-container {
+    justify-content: center;
+  }
+
+  .btn-logout {
+    font-size: 14px;
+  }
+}
+
+/* Responsive styling for iPad  start*/
+@media (max-width: 810px) {
+  .nav-header h1 {
+    font-size: 22px;
+  }
+
+  .header-link {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .ticket-heading-title-container {
+    align-items: center;
+  }
+
+  .ticket-title {
+    font-size: 14px;
+  }
+
+  .ticket-id {
+    display: none;
+  }
+
+  .ticket-date {
+    font-size: 9px;
+  }
+
+  .ticket-status {
+    width: 70px;
+  }
+
+  .ticket-status p {
+    font-size: 12px;
+  }
+
+  .ticket-body {
+    font-size: 12px;
+  }
+
+  .submessage {
+    font-size: 12px;
+  }
+
+  .form-group {
+    padding: 0 15px;
+  }
+
+  .form-group label {
+    font-size: 15px;
+  }
+
+  a {
+    font-size: 14px;
+  }
+  .forgot-pass-link {
+    font-size: 14px;
+  }
+
+  .btn-logout {
+    font-size: 14px;
+  }
+
+  .dashboard-btn-container {
+    justify-content: center;
+  }
+}
+
+/* Responsive styling for iPad  end*/
+
+/* Responsive styling for mobile start*/
 
 @media (max-width: 600px) {
   .nav-header h1 {
@@ -332,4 +471,21 @@ a {
   .forgot-pass-link {
     font-size: 14px;
   }
+
+  .ticket-status {
+    width: 50px;
+  }
+
+  .ticket-status p {
+    font-size: 10px;
+  }
+
+  .btn-logout {
+    font-size: 14px;
+  }
+
+  .dashboard-btn-container {
+    justify-content: center;
+  }
 }
+/* Responsive styling for mobile  end*/

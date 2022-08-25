@@ -8,11 +8,13 @@ function TicketsItem({ ticket }) {
             <p className='ticket-id'>(id: {ticket._id})</p>
           </div>
           <div className='ticket-status'>
-            <p>Solved</p>
+            {ticket.status === "Open" ? <p>Open</p> : <p>Solved</p>}
           </div>
         </div>
 
-        <div className='ticket-date'>Submitted on: Mon, September 20, 2022</div>
+        <div className='ticket-date'>
+          Submitted On: {new Date(ticket.createdAt).toLocaleDateString("en-us")}
+        </div>
 
         <div className='ticket-body'>{ticket.description}</div>
       </div>

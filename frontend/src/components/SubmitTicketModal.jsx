@@ -53,13 +53,20 @@ function SubmitTicketModal({ closeModal }) {
           <div className='form-group'>
             <form onSubmit={onSubmit}>
               <label htmlFor='title'>Subject:</label>
-              <input type='text' id='title' name='title' onChange={onChange} />
+              <input
+                type='text'
+                id='title'
+                name='title'
+                onChange={onChange}
+                required
+              />
               <label htmlFor='description'>Describe your issue:</label>
               <textarea
                 name='description'
                 id='description'
                 resize='none'
-                onChange={onChange}></textarea>
+                onChange={onChange}
+                required></textarea>
 
               <button className='btn-primary' type='submit'>
                 Submit New Ticket
