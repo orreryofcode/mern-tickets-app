@@ -12,8 +12,7 @@ const createTicket = async (ticketData, token) => {
   };
 
   const response = await axios.post(API_URL, ticketData, config);
-
-  return response.data;
+  return response.data.ticket;
 };
 
 // Get tickets

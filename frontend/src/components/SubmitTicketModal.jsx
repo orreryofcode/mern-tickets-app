@@ -32,7 +32,7 @@ function SubmitTicketModal({ closeModal }) {
 
     dispatch(createTicket(ticketData));
     setFormData("");
-    navigate(0);
+
     closeModal(false);
   };
 
