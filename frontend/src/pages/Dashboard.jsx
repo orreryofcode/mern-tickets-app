@@ -58,8 +58,8 @@ function Dashboard() {
 
           <section>
             {tickets.length > 0 ? (
-              tickets.map((ticket, index) => (
-                <TicketsItem ticket={ticket} key={index} />
+              tickets.map((ticket) => (
+                <TicketsItem ticket={ticket} key={ticket._id} />
               ))
             ) : (
               <h3>No open tickets.</h3>

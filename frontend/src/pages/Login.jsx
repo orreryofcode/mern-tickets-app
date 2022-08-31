@@ -32,7 +32,7 @@ function Login() {
       navigate("/");
     }
 
-    dispatch(reset);
+    dispatch(reset());
   }, [isError, isSuccess, user, message, navigate, dispatch]);
 
   // Handle form data

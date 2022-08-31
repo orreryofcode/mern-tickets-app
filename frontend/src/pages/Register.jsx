@@ -34,7 +34,7 @@ function Register() {
       navigate("/");
     }
 
-    dispatch(reset);
+    dispatch(reset());
   }, [isError, isSuccess, message, user, navigate, dispatch]);
 
   const onChange = (e) => {

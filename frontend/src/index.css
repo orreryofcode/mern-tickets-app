@@ -140,8 +140,10 @@ a {
 }
 
 .forgot-pass-link {
-  position: relative;
+  /* position: relative; */
   display: block;
+  width: 200px;
+  margin: auto;
   margin-top: -40px;
   margin-bottom: 40px;
   font-size: 15px;
