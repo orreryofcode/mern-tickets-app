@@ -68,12 +68,12 @@ function Register() {
     <>
       <section className='register'>
         <h1 className='register-heading'>Create Your Account</h1>
-        <p className='register-message'>
+        {/* <p className='register-message'>
           A verification email will be sent to the registered email account.
         </p>
         <p className='submessage'>
           (Check your spam folder if you don't see it.)
-        </p>
+        </p> */}
 
         <div className='form-group'>
           <form onSubmit={onSubmit}>
