@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
 import { createTicket } from "../features/tickets/ticketsSlice";
 
 function SubmitTicketModal({ closeModal }) {
