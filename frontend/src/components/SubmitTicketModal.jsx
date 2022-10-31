@@ -13,7 +13,6 @@ function SubmitTicketModal({ closeModal }) {
   const { title, description } = formData;
 
   const dispatch = useDispatch();
-  const navigate = useNavigate();
 
   const onChange = (e) => {
     setFormData((prevState) => ({
