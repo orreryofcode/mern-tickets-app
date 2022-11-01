@@ -14,6 +14,17 @@ app.use("/api/tickets", require("./routes/ticketsRoute"));
 app.use("/api/users", require("./routes/usersRoute"));
 
 // Serve frontend here
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "../frontend/build")));
+
+  app.get("*", (req, res) => {
+    res.sendFile(
+      path.resolve(__dirname, "../", "frontend", "build", "index.html")
+    );
+  });
+} else {
+  app.get("/", (req, res) => res.send("Please set environment to production"));
+}
 
 app.use(errorHandler);
 
