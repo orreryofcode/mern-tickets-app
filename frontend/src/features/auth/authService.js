@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = process.env.RAILWAY_URI + "/api/users/";
+const API_URL = "/api/users/";
 
 // Register a new user
 const register = async (userData) => {
