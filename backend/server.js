@@ -11,7 +11,12 @@ const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://mern-tickets-app.vercel.app/",
+    credentials: true,
+  })
+);
 
 app.use("/api/tickets", require("./routes/ticketsRoute"));
 app.use("/api/users", require("./routes/usersRoute"));
