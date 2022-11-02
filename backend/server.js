@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(
   cors({
-    origin: "https://mern-tickets-app.vercel.app/",
+    origin: "https://mern-tickets-app.vercel.app",
     methods: "GET,POST,PUT,DELETE",
     credentials: true,
   })
