@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "mern-tickets-app.vercel.app/api/tickets";
+const API_URL = "/api/tickets";
 
 // Create new ticket
 const createTicket = async (ticketData, token) => {
