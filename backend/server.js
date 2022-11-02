@@ -1,5 +1,6 @@
 const express = require("express");
 const connectDB = require("./config/db");
+const cors = requires("cors");
 const path = require("path");
 const { errorHandler } = require("./middleware/errorHandler");
 const dotenv = require("dotenv").config();
@@ -10,6 +11,7 @@ const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(cors());
 
 app.use("/api/tickets", require("./routes/ticketsRoute"));
 app.use("/api/users", require("./routes/usersRoute"));
