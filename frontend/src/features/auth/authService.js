@@ -1,7 +1,7 @@
 import axios from "axios";
 axios.defaults.withCredentials = true;
 
-const API_URL = "/api/users/";
+const API_URL = "https://mern-tickets-app-production.up.railway.app/api/users/";
 
 // Register a new user
 const register = async (userData) => {

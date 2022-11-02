@@ -1,7 +1,8 @@
 import axios from "axios";
 axios.defaults.withCredentials = true;
 
-const API_URL = "/api/tickets";
+const API_URL =
+  "https://mern-tickets-app-production.up.railway.app/api/tickets";
 
 // Create new ticket
 const createTicket = async (ticketData, token) => {
